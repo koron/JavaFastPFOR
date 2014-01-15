@@ -19,6 +19,14 @@ your array use less than 32 bits. These sort of arrays often come up
 when using differential coding in databases and information
 retrieval (e.g., in inverted indexes or column stores).
 
+This libary is used by ClueWeb Tools (https://github.com/lintool/clueweb).
+
+It is a java port of the fastpfor C++ library (https://github.com/lemire/FastPFor). 
+There is also a Go port (https://github.com/reducedb/encoding). The C++
+library is used by the zsearch engine (http://victorparmar.github.com/zsearch/)
+as well as in GMAP and GSNAP (http://research-pub.gene.com/gmap/).
+
+
 Some CODECs ("integrated codecs") assume that the integers are
 in sorted orders. Most others do not.
 
@@ -34,7 +42,7 @@ the following code in your pom.xml file:
          <dependency>
 	     <groupId>me.lemire.integercompression</groupId>
 	     <artifactId>JavaFastPFOR</artifactId>
-	     <version>0.0.7</version>
+	     <version>0.0.9</version>
          </dependency>
      </dependencies>
 
@@ -127,4 +135,9 @@ Daniel Lemire and Leonid Boytsov, Decoding billions of integers per second throu
 http://arxiv.org/abs/1209.2137
 
 
+Ikhtear Sharif wrote his M.Sc. thesis on this library:
 
+Ikhtear Sharif, Performance Evaluation of Fast Integer Compression Techniques Over Tables, M.Sc. thesis, UNB 2013.
+http://hdl.handle.net/1882/45703
+
+He also posted his slides online: http://www.slideshare.net/ikhtearSharif/ikhtear-defense
